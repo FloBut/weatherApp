@@ -23,7 +23,7 @@ public class WeatherController {
 
 @Autowired
     public WeatherController(WeatherService weatherService) {
-        this.weatherService = weatherService;
+    this.weatherService = weatherService;
     }
 @GetMapping("/current")
     public ResponseEntity<CurrentWeatherDTO> getCurrentWeather(@RequestParam double lat, @RequestParam  double lon ) {
@@ -32,7 +32,7 @@ public class WeatherController {
     } catch (JsonProcessingException e) {
         throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
     }
-    }
+}
 
     @GetMapping("/forecast")
     public ResponseEntity<List<CurrentWeatherDTO>> getWeatherForecast (@RequestParam  double lat, @RequestParam double lon, @RequestParam String timesteps){

@@ -1,10 +1,10 @@
 package com.example.weatherapp.dto;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class CurrentWeatherDTO {
     private double temperature;
-
 
     private double feelsLikeTemperature;
 
